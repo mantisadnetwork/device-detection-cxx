@@ -162,7 +162,7 @@ namespace FiftyoneDegrees {
 				/**
 				 * @copydoc EngineDeviceDetection::processDeviceDetection(const char*)
 				 */
-				ResultsHash* process(const char *userAgent);
+				ResultsHash* process(const char *userAgent) const;
 
 				/**
 				 * @}

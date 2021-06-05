@@ -61,7 +61,7 @@ namespace FiftyoneDegrees {
 		 * EngineDeviceDetection *engine = new EngineDeviceDetection(
 		 *     config,
 		 *     properties);
-		 * ```
+		 * ```ConfigHash
 		 */
 		class ConfigDeviceDetection : public ConfigBase {
 		public:

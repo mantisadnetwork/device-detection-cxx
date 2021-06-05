@@ -202,15 +202,15 @@ namespace FiftyoneDegrees {
 			protected:
 				void getValuesInternal(
 					int requiredPropertyIndex,
-					vector<string> &values);
+					vector<string> &values) const;
 
-				bool hasValuesInternal(int requiredPropertyIndex);
+				bool hasValuesInternal(int requiredPropertyIndex) const;
 
 				const char* getNoValueMessageInternal(
-					fiftyoneDegreesResultsNoValueReason reason);
+					fiftyoneDegreesResultsNoValueReason reason) const;
 
 				fiftyoneDegreesResultsNoValueReason getNoValueReasonInternal(
-					int requiredPropertyIndex);
+					int requiredPropertyIndex) const;
 
 			private:
 				fiftyoneDegreesResultsHash *results;

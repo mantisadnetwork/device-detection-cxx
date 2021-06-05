@@ -236,7 +236,7 @@ DeviceDetection::Hash::ResultsHash* EngineHash::process(
 }
 
 DeviceDetection::Hash::ResultsHash* EngineHash::process(
-	const char *userAgent) {
+	const char *userAgent) const {
 	EXCEPTION_CREATE;
 	fiftyoneDegreesResultsHash *results = ResultsHashCreate(
 		manager.get(),

@@ -45,7 +45,7 @@ DeviceDetection::Hash::ResultsHash::~ResultsHash() {
 
 void DeviceDetection::Hash::ResultsHash::getValuesInternal(
 	int requiredPropertyIndex,
-	vector<string> &values) {
+	vector<string> &values) const {
 	EXCEPTION_CREATE;
 	uint32_t i;
 	Item *valuesItems;
@@ -98,7 +98,7 @@ void DeviceDetection::Hash::ResultsHash::getValuesInternal(
 }
 
 bool DeviceDetection::Hash::ResultsHash::hasValuesInternal(
-	int requiredPropertyIndex) {
+	int requiredPropertyIndex) const {
 	EXCEPTION_CREATE;
 	bool hasValues = fiftyoneDegreesResultsHashGetHasValues(
 		results,
@@ -109,13 +109,13 @@ bool DeviceDetection::Hash::ResultsHash::hasValuesInternal(
 }
 
 const char* DeviceDetection::Hash::ResultsHash::getNoValueMessageInternal(
-	fiftyoneDegreesResultsNoValueReason reason) {
+	fiftyoneDegreesResultsNoValueReason reason) const {
 	return fiftyoneDegreesResultsHashGetNoValueReasonMessage(reason);
 }
 
 fiftyoneDegreesResultsNoValueReason
 DeviceDetection::Hash::ResultsHash::getNoValueReasonInternal(
-	int requiredPropertyIndex) {
+	int requiredPropertyIndex) const {
 	EXCEPTION_CREATE;
 	fiftyoneDegreesResultsNoValueReason reason =
 		fiftyoneDegreesResultsHashGetNoValueReason(
